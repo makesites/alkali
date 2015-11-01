@@ -11,8 +11,39 @@
 @mq_xxs: 20em; /* 320px */
 
 // --------------------------------------------------
-/* colors */
+/* structure */
 
+@padding-xl: 1em;
+@padding-l: 1em;
+@padding-m: 1em;
+@padding-s: .8em;
+@padding-xs: .8em;
+
+// --------------------------------------------------
+/* typography */
+@font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif: Georgia, "Times New Roman", Times, serif;
+@font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base: @font-family-sans-serif;
+@font-size-base: 14px;
+@font-size-large: ceil((@font-size-base * 1.25));
+@font-size-small: ceil((@font-size-base * 0.85));
+@font-size-h1: floor((@font-size-base * 2.6));
+@font-size-h2: floor((@font-size-base * 2.15));
+@font-size-h3: ceil((@font-size-base * 1.7));
+@font-size-h4: ceil((@font-size-base * 1.25));
+@font-size-h5: @font-size-base;
+@font-size-h6: ceil((@font-size-base * 0.85));
+@font-size-blockquote: @font-size-base;
+@line-height-base: 1.4;
+@line-height-computed: floor((@font-size-base * @line-height-base));
+@headings-font-family: inherit;
+@headings-font-weight: 500;
+@headings-line-height: 1.1;
+@headings-color: inherit;
+
+// --------------------------------------------------
+/* colors */
 @color-black: #000;
 @color-white: #fff;
 @color-base: #000;
@@ -20,9 +51,27 @@
 @color-gray-lt: lighten(@color-base, 93.5%);
 @color-gray-dk: lighten(@color-base, 20%);
 @color-bg: @color-white;
-@color-primary: #00f;
+
+@color-primary: #428bca;
 @color-secondary: #f00;
 @color-tertiary: #0f0;
+
+@color-success: #5cb85c;
+@color-info: #5bc0de;
+@color-warning: #f0ad4e;
+@color-danger: #f0ad4e;
+
+@color-bg: @color-white;
+@color-text: @color-gray-dk;
+@color-link: @color-primary;
+@color-link-hover: darken(@color-link, 15%);
+
+@color-nav-text: #000;
+@color-nav-link-hover-bg: #fff;
+@color-nav-link-disabled: @color-gray-lt;
+
+@color-abbr-border: #ccc;
+@color-blockquote-border: #ccc;
 
 // --------------------------------------------------
 
