@@ -46,7 +46,7 @@
 }
 
 /* clearfix */
-.clearfix:before, .clearfix:after {
+/* .clearfix:before, .clearfix:after {
 	content: "\0020";
 	display: block;
 	height: 0;
@@ -59,7 +59,19 @@
 
 .clearfix {
 	zoom: 1;
+} */
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
 }
+
 
 .center {
 	text-align:center;
