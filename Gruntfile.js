@@ -8,6 +8,7 @@ module.exports = function(grunt) {
           compress: true,
 		  sourceMap: true,
           yuicompress: true,
+          cleancss: true,
           optimization: 2
         },
         files: {
@@ -20,7 +21,7 @@ module.exports = function(grunt) {
           compress: false,
 		  sourceMap: true,
           yuicompress: false,
-		  cleancss: false,
+		  cleancss: true,
           optimization: 2
         },
         files: {
