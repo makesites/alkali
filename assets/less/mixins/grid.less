@@ -1,6 +1,6 @@
 /* usage: .grid(small; 12); */
 
-/* .grid(@name; @columns; @index: 1) when (@index =< @columns) {
+.grid(@name; @columns; @index: 1) when (@index =< @columns) {
   .grid(@name; @columns; (@index + 1));
 
   .@{name}-@{index} {
@@ -9,9 +9,9 @@
       &:extend(.column);
     }
   }
-} */
+}
 
-.grid(@name; @columns; @index: 1) when (@index =< @columns) {
+/* .grid(@name; @columns; @index: 1) when (@index =< @columns) {
   .grid(@name; @columns; (@index + 1));
 
   .@{name}-@{index} {
@@ -26,4 +26,4 @@
       margin-left: percentage( (@index / @columns) );
     }
   }
-}
+} */
