@@ -30,3 +30,19 @@
 		width: @container-xxs;
 	}
 }
+
+/* .responsive(gallery, {
+    "mq-m": 12
+    "mq-l": 4
+    }); */
+
+
+.gallery {
+    .col-4;
+}
+
+@media only screen and (min-width: @mq-m) (max-width: @mq-l) {
+    .gallery {
+        .col-12;
+    }
+}
