@@ -1,5 +1,16 @@
 /* usage: .grid(small; 12); */
 
+/* .grid(@name; @columns; @index: 1) when (@index =< @columns) {
+  .grid(@name; @columns; (@index + 1));
+
+  .@{name}-@{index} {
+    width: ( percentage(@index / @columns) );
+    & when ( @index < @columns ) {
+      &:extend(.column);
+    }
+  }
+} */
+
 .grid(@name; @columns; @index: 1) when (@index =< @columns) {
   .grid(@name; @columns; (@index + 1));
 
@@ -9,5 +20,10 @@
       &:extend(.column);
     }
   }
-
+  // Generate the offset classes
+  & when ( @index < @columns ) {
+    .@{name}-offset-@{index} {
+      margin-left: percentage( (@index / @columns) );
+    }
+  }
 }
