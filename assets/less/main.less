@@ -5,7 +5,7 @@
 //
 // --------------------------------------------------
 
-@import "core.less";
+@import "common.less";
 @import "variables.less";
 
 // --------------------------------------------------
@@ -16,17 +16,24 @@
 /* clearfix indluded in core: core/classes */
 /* @import "mixins/clearfix.less"; */
 
+
+// --------------------------------------------------
+
+// @import core
+@import "core/typography.less";
+@import "core/structure.less";
+@import "core/grid.less";
+/* @import "core/grid-loop.less"; */
+
 // --------------------------------------------------
 
 // @import modules
 @import "modules/nav.less";
-@import "modules/typography.less";
-@import "modules/structure.less";
-@import "modules/grid.less";
 @import "modules/navbar.less";
-/* @import "modules/grid-loop.less"; */
+
 /* @import "modules/forms.less"; */
 
 // --------------------------------------------------
 
 // @import custom less files here
+/* @import "sections/index.less" */
