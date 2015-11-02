@@ -1,0 +1,32 @@
+.container {
+	margin: 0 auto;
+	width: 100% - 2 * @margin;
+
+	@media (min-width: @mq-xxl) {
+		width: @container-xxl;
+  	}
+
+	@media (min-width: @mq-xl) and (max-width: @mq-xxl) {
+		width: @container-xl;
+	}
+
+	@media (min-width: @mq-l) and (max-width: @mq-xl) {
+		width: @container-l;
+	}
+
+	@media (min-width: @mq-m) and (max-width: @mq-l) {
+		width: @container-m;
+	}
+
+	@media (min-width: @mq-s) and (max-width: @mq-m) {
+		width: @container-s;
+	}
+
+	@media (min-width: @mq-xs) and (max-width: @mq-s) {
+		width: @container-xs;
+	}
+
+	@media (min-width: @mq-xxs) and (max-width: @mq-xs) {
+		width: @container-xxs;
+	}
+}

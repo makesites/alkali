@@ -1,0 +1,15 @@
+// using the loop
+@media only screen and (min-width: @mq_l) {
+  .col {
+    float: left;
+  }
+  .grid(col; 12);
+}
+
+@media only screen and (min-width: @mq_m) (max-width: @mq_l) {
+  .grid(col-l; 4);
+}
+
+@media only screen and (min-width: @mq_xxs) and (max-width: @mq_m) {
+  .grid(col-m; 2);
+}
