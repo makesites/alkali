@@ -2,22 +2,62 @@
 // --------------------------------------------------
 /* media query break points */
 
-@mq_xxl: 120em; /* 1920px */
-@mq_xl: 80em; /* 1280px  */
-@mq_l: 64em; /* 1024px */
-@mq_m: 46.8em; /* 748px */
-@mq_s: 30em;  /* 480px */
-@mq_xs: 22em; /* 352px */
-@mq_xxs: 20em; /* 320px */
+/* @mq_xxl: 120em;
+@mq_xl: 80em;
+@mq_l: 64em;
+@mq_m: 46.8em;
+@mq_s: 30em;
+@mq_xs: 22em;
+@mq_xxs: 20em; */
+
+@mq-xxl: 120em; /* 1920px */
+@mq-xl: 80em; /* 1280px  */
+@mq-l: 64em; /* 1024px */
+@mq-m: 46.8em; /* 748px */
+@mq-s: 30em;  /* 480px */
+@mq-xs: 22em; /* 352px */
+@mq-xxs: 20em; /* 320px */
 
 // --------------------------------------------------
 /* structure */
-
+@padding: 1em;
+@padding-xxl: 1em;
 @padding-xl: 1em;
 @padding-l: 1em;
 @padding-m: 1em;
 @padding-s: .8em;
 @padding-xs: .8em;
+@padding-xxs: .8em;
+
+@margin: 1em;
+@margin-xxl: 1em;
+@margin-xl: 1em;
+@margin-l: 1em;
+@margin-m: 1em;
+@margin-s: .8em;
+@margin-xs: .8em;
+@margin-xxs: .8em;
+
+@gutter: 2em;
+@gutter-xxl: 2em;
+@gutter-xl: 2em;
+@gutter-l: 2em;
+@gutter-m: 2em;
+@gutter-s: 1.4em;
+@gutter-xs: 1.4em;
+@gutter-xxs: 1.4em;
+
+@container-xxl: 80em;
+@container-xl: @mq-xl - 2 * @gutter-xl;
+@container-l: @mq-l - 2 * @gutter-l;
+/* @container-m: @mq-m - 2 * @margin-m;
+@container-s: @mq-s - 2 * @margin-s;
+@container-xs: @mq-xs - 2 * @margin-xs;
+@container-xxs: @mq-xxs - 2 * @margin-xxs; */
+@container-m: 100% - 2 * @gutter-m;
+@container-s: 100% - 2 * @gutter-s;
+@container-xs: 100% - 2 * @gutter-xs;
+@container-xxs: 100% - 2 * @gutter-xxs;
 
 // --------------------------------------------------
 /* typography */
@@ -75,6 +115,5 @@
 
 // --------------------------------------------------
 
-@max_width: 1000px;
-@padding: 1em;
-@margin: 1em;
+@navbar-height: 50px;
+@navbar-margin-bottom: 1em;
