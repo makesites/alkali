@@ -2,14 +2,6 @@
 // --------------------------------------------------
 /* media query break points */
 
-/* @mq_xxl: 120em;
-@mq_xl: 80em;
-@mq_l: 64em;
-@mq_m: 46.8em;
-@mq_s: 30em;
-@mq_xs: 22em;
-@mq_xxs: 20em; */
-
 @mq-xxl: 120em; /* 1920px */
 @mq-xl: 80em; /* 1280px  */
 @mq-l: 64em; /* 1024px */
@@ -50,10 +42,6 @@
 @container-xxl: 80em;
 @container-xl: @mq-xl - 2 * @gutter-xl;
 @container-l: @mq-l - 2 * @gutter-l;
-/* @container-m: @mq-m - 2 * @margin-m;
-@container-s: @mq-s - 2 * @margin-s;
-@container-xs: @mq-xs - 2 * @margin-xs;
-@container-xxs: @mq-xxs - 2 * @margin-xxs; */
 @container-m: 100% - 2 * @gutter-m;
 @container-s: 100% - 2 * @gutter-s;
 @container-xs: 100% - 2 * @gutter-xs;
@@ -98,7 +86,7 @@
 
 @color-success: #5cb85c;
 @color-info: #5bc0de;
-@color-warning: #f0ad4e;
+@color-warning: #f00;
 @color-danger: #f0ad4e;
 
 @color-bg: @color-white;
@@ -115,5 +103,38 @@
 
 // --------------------------------------------------
 
+/* navbar */
 @navbar-height: 50px;
 @navbar-margin-bottom: 1em;
+
+// --------------------------------------------------
+
+/* buttons */
+@btn-font-weight: inherit;
+@btn-border-radius: 5px;
+@btn-padding: .8em 1.2em;
+@btn-text-decoration: none;
+@btn-text-decoration-hover: none;
+@btn-default-color: #333;
+@btn-default-bg: @color-white;
+@btn-default-border: @color-gray-lt;
+@btn-primary-color: #fff;
+@btn-primary-bg: @color-primary;
+
+@btn-secondary-color: #fff;
+@btn-secondary-bg: @color-secondary;
+
+@btn-tertiary-color: #fff;
+@btn-tertiary-bg: @color-tertiary;
+
+@btn-success-color: #fff;
+@btn-success-bg: @color-success;
+
+@btn-info-color: #fff;
+@btn-info-bg: @color-info;
+
+@btn-warning-color: #fff;
+@btn-warning-bg: @color-warning;
+
+@btn-danger-color: #fff;
+@btn-danger-bg: @color-danger;
