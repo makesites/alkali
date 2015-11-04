@@ -36,16 +36,41 @@
     "mq-l": 4
     }); */
 
-
 .gallery {
-    .col-4;
+	&:extend(.colgroup);
+	.item {
+	    .col-4;
+		padding-bottom: 2em;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	@media only screen and (min-width: @mq-xxl) {
+	    .item {
+	        .col-2;
+	    }
+	}
+
+	@media only screen and (min-width: @mq-xl) and (max-width: @mq-xxl) {
+	    .item {
+	        .col-3;
+	    }
+	}
+
+	@media only screen and (min-width: @mq-s) and (max-width: @mq-m) {
+	    .item {
+	        .col-6;
+	    }
+	}
+
+	@media only screen and (max-width: @mq-s) {
+	    .item {
+	        .col-12;
+	    }
+	}
 }
 
-@media only screen and (min-width: @mq-m) (max-width: @mq-l) {
-    .gallery {
-        .col-12;
-    }
-}
-
-@import "mixins/grid.less";
-.grid(grid-12; 12);
+/* @import "mixins/grid.less";
+.grid(grid-12; 12); */
