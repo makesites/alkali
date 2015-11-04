@@ -31,21 +31,21 @@
 @margin-xxs: .8em;
 
 @gutter: 2em;
-@gutter-xxl: 2em;
-@gutter-xl: 2em;
-@gutter-l: 2em;
-@gutter-m: 2em;
-@gutter-s: 1.4em;
-@gutter-xs: 1.4em;
-@gutter-xxs: 1.4em;
+@gutter-xxl: 4em;
+@gutter-xl: 4em;
+@gutter-l: 4em;
+@gutter-m: 4em;
+@gutter-s: 2em;
+@gutter-xs: 1em;
+@gutter-xxs: 1em;
 
 @container-xxl: 80em;
-@container-xl: @mq-xl - 2 * @gutter-xl;
-@container-l: @mq-l - 2 * @gutter-l;
-@container-m: 100% - 2 * @gutter-m;
-@container-s: 100% - 2 * @gutter-s;
-@container-xs: 100% - 2 * @gutter-xs;
-@container-xxs: 100% - 2 * @gutter-xxs;
+@container-xl: @mq-xl - (2 * @gutter-xl);
+@container-l: @mq-l - (2 * @gutter-l);
+@container-m: ~"calc(100% - (2 * @{gutter-m}))";
+@container-s: ~"calc(100% - (2 * @{gutter-s}))";
+@container-xs: ~"calc(100% - 2 * @{gutter-xs})";
+@container-xxs: ~"calc(100% - 2 * @{gutter-xxs})";
 
 @import "variables/typography.less";
 @import "variables/color.less";
