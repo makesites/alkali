@@ -1,0 +1,20 @@
+.index {
+
+    /* requires: @import "mixins/button.less"; */
+
+    .button-brand-1 {
+    	&:extend(.btn);
+        &:extend(.btn-block);
+    	.button(@color-white; @color-brand-primary; darken(@color-brand-primary, 20%));
+    }
+
+    .button-brand-2 {
+    	&:extend(.btn);
+    	.button(@color-white; @color-brand-secondary; darken(@color-brand-secondary, 20%));
+    }
+
+    /* .button-2 {
+    	&:extend(.btn);
+    	.button(@color-white; @color-brand-secondary; transparent);
+    } */
+}
