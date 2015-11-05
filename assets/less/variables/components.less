@@ -1,10 +1,8 @@
 // variables
-// buttons.less
-// requires variables/color.less
-// @import "variables/color.less";
+// components.less
 
 @btn-font-weight: inherit;
-@btn-border-radius: 3px;
+@btn-border-radius: @border-radius;
 @btn-padding: .8em 1.2em;
 @btn-text-decoration: none;
 @btn-text-decoration-hover: none;
@@ -31,3 +29,14 @@
 
 @btn-danger-color: #fff;
 @btn-danger-bg: @color-danger;
+
+ // input
+@input-color-bg: @color-white;
+@input-color-bg-disabled: @color-gray-lt;
+@input-color: @color-text;
+@input-color-placeholder: @color-gray-lt;
+@input-height: (@line-height + (@padding * 2));
+
+// navbar
+@navbar-height: 50px;
+@navbar-margin-bottom: 1em;

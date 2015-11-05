@@ -1,0 +1,57 @@
+// float-label.less
+.float-label {
+	position: relative;
+	display: block;
+
+	input, label {
+		-webkit-transition: 0.2s ease-in-out;
+		-moz-transition: 0.2s ease-in-out;
+		-o-transition: 0.2s ease-in-out;
+		transition: 0.2s ease-in-out;
+	}
+
+	label {
+		position: absolute;
+		top: 5px;
+		left: 1em;
+		font-size: .8rem;
+		opacity: 0;
+	}
+
+	input[type='text'], input[type='email'], input[type='tel'], input[type='password'] {
+		height: 50px;
+		vertical-align: baseline;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		outline: none;
+	}
+
+	input:focus + label {
+		opacity: 1;
+		display: inline-block;
+		height: 10px;
+		padding-bottom: 5px;
+		color: #ccc;
+	}
+
+	input:focus {
+		padding-top: 20px;
+	}
+
+	input:focus::-webkit-input-placeholder {
+		opacity: 0;
+	}
+
+	input:focus:-moz-placeholder {
+		opacity: 0;
+	}
+
+	input:focus::-moz-placeholder {
+		opacity: 0;
+	}
+
+	input:focus:-ms-input-placeholder {
+		opacity: 0;
+	}
+}
