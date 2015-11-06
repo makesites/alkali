@@ -16,7 +16,9 @@ input[type="password"],
 input[type="search"],
 input[type="color"],
 input[type="tel"],
+input[type="url"],
 input[type="number"],
+input[type="date"],
 select, textarea, output {
 	margin-bottom: @margin;
 	color: @input-color;
@@ -34,8 +36,8 @@ input[type="password"],
 input[type="search"],
 input[type="color"],
 input[type="tel"],
-input[type="number"],
 input[type="url"],
+
 select, output {
 	width: 300px;
 	height: 50px;
@@ -50,7 +52,7 @@ input[type="color"] {
 	-webkit-appearance: none;
 }
 
-input[type="number"] {
+input[type="number"], input[type="date"] {
 	height: 50px;
 }
 
@@ -61,7 +63,6 @@ input[type="number"] {
 	input[type="search"],
 	input[type="color"],
 	input[type="tel"],
-	input[type="number"],
 	input[type="url"],
 	select, output {
 		width: 100%;
