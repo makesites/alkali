@@ -61,7 +61,7 @@
 		</p>
 
 		<h4>Grid</h4>
-		<div class="gallery clearfix">
+		<div class="gallery colgroup">
 
 			<div class="item"><img src="http://lorempixel.com/g/500/500/abstract/"></div>
 			<div class="item"><img src="http://lorempixel.com/g/500/500/abstract/"></div>
@@ -74,29 +74,64 @@
 			<div class="item"><img src="http://lorempixel.com/g/500/500/abstract/"></div>
 		</div>
 
+		<div>
 		<h4>Forms</h4>
-		<form>
+			<form>
 				<label for="name">Your name</label>
 				<input type="text" id="name" name="name" placeholder="Your name" tabindex="1">
 
+				<input type="search" name="search" placeholder="Search">
 
-		</form>
+				<input type="email" name="email" placeholder="Enter your email" required>
 
+				<input type="password" name="password" placeholder="Enter your password">
+
+				<input type="color" value="#0000ff"">
+
+				<select name="cars">
+					<option value="volvo" selected>Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="fiat">Fiat</option>
+					<option value="audi">Audi</option>
+				</select>
+
+				<textarea name="message">The cat was playing in the garden.</textarea>
+				<input type="submit" class="btn btn-primary" value="Submit">
+				<!-- button class="btn-primary btn-block" type="submit">Click Me!</button -->
+			</form>
+		</div>
+
+		<div>
+			<form action="action_page.asp"
+  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range"  id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+		</div>
+
+		<div>
 		<h4>Float label</h4>
-		<form>
-			<field class="float-label">
-				<input type="text" id="name" name="name" placeholder="Your name" tabindex="1">
-				<label for="name">Your name</label>
-			</field>
-			<field class="float-label">
-				<input type="text" id="city" name="city" placeholder="City" tabindex="2">
-				<label for="city">City or town</label>
-			</field>
-			<field class="float-label">
-				<input type="tel" id="phone" name="phone" placeholder="Phone" tabindex="3">
-				<label for="phone">Phone</label>
-			</field>
-		</form>
+			<form>
+				<field class="float-label">
+					<input type="text" id="name" name="name" placeholder="Your name" tabindex="1">
+					<label for="name">Your name</label>
+				</field>
+				<field class="float-label">
+					<input type="text" id="city" name="city" placeholder="City" tabindex="2">
+					<label for="city">City or town</label>
+				</field>
+				<field class="float-label">
+					<input type="tel" id="phone" name="phone" placeholder="Phone" tabindex="3">
+					<label for="phone">Phone</label>
+				</field>
+			</form>
+		</div>
 </div>
 
 <footer>
