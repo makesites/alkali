@@ -52,8 +52,17 @@ input[type="color"] {
 	-webkit-appearance: none;
 }
 
-input[type="number"], input[type="date"] {
+input[type="number"], input[type="date"], input[type="month"], input[type="week"], input[type="time"] {
 	height: 50px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+	margin: .5em .5em .5em 1em;
+	padding: 10px;
+}
+
+input[type="radio"]:first-child, input[type="checkbox"]:first-child {
+	margin-left: 0;
 }
 
 @media (max-width: @mq-s) {
