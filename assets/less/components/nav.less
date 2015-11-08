@@ -1,36 +1,39 @@
 // nav.less
-.nav {
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-  &:extend(.clearfix all);
+nav {
+    ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        &:extend(.clearfix all);
 
-  > li {
-    position: relative;
-    display: block;
+        > li {
+            position: relative;
+            display: block;
 
-    > a {
-      position: relative;
-      display: block;
-      padding: @padding-s;
-      &:hover,
-      &:focus {
-        text-decoration: none;
-        background-color: @color-nav-link-hover-bg;
-      }
+            > a {
+                position: relative;
+                display: block;
+                padding: @padding-s;
+
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    background-color: @color-nav-link-hover-bg;
+                }
+            }
+
+            // Disabled state sets text to gray and nukes hover/tab effects
+            &.disabled > a {
+                color: @color-nav-link-disabled;
+
+                &:hover,
+                &:focus {
+                    color: @color-nav-link-disabled;
+                    text-decoration: none;
+                    background-color: transparent;
+                    cursor: none;
+                }
+            }
+        }
     }
-
-    // Disabled state sets text to gray and nukes hover/tab effects
-    &.disabled > a {
-      color: @color-nav-link-disabled;
-
-      &:hover,
-      &:focus {
-        color: @color-nav-link-disabled;
-        text-decoration: none;
-        background-color: transparent;
-        cursor: none;
-      }
-    }
-  }
 }
