@@ -13,7 +13,8 @@ nav {
             > a {
                 position: relative;
                 display: block;
-                padding: @padding-s;
+                padding: @padding;
+                text-decoration: none;
 
                 &:hover,
                 &:focus {
@@ -22,7 +23,6 @@ nav {
                 }
             }
 
-            // Disabled state sets text to gray and nukes hover/tab effects
             &.disabled > a {
                 color: @color-nav-link-disabled;
 
@@ -34,6 +34,14 @@ nav {
                     cursor: none;
                 }
             }
+        }
+    }
+}
+
+nav.hori {
+    ul {
+        li {
+            float: left;
         }
     }
 }
