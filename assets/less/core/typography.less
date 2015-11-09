@@ -28,7 +28,13 @@ h5 { font-size: @font-size-h5; }
 h6 { font-size: @font-size-h6; }
 
 // Links
+a, a:visited, a:link {
+    color: @color-link;
 
+    &:hover {
+        color: darken(@color-link, 10%);
+    }
+}
 
 // Body text
 // -------------------------
