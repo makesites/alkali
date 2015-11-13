@@ -20,6 +20,7 @@
 				<li><a href="#grid">Grid</a></li>
 				<li><a href="#forms">Forms</a></li>
 				<li><a href="#float-label">Float Label</a></li>
+				<li><a href="#tabs">Tabs</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -156,6 +157,77 @@
 					</field>
 				</form>
 		</div>
+
+		<div id="tabs-aria" style="display: none">
+			<div class="tabs">
+			  <div role="tablist">
+			    <div role="tab" aria-selected="true" tabindex="0">
+			      <span>Sign in</span>
+			    </div>
+			    <div role="tab" aria-selected="false" tabindex="-1">
+			      <span>Register</span>
+			    </div>
+			  </div>
+			  <div>
+			    <div role="tabpanel" id="sign-in" aria-hidden="false">
+			      <!-- Sign in Content -->
+			    </div>
+			    <div role="tabpanel" id="register" aria-hidden="true">
+			      <!-- Register Content -->
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+
+
+
+		<div id="tabs">
+			<h3>Tabs</h3>
+			<ul class="nav tabs clearfix" role="tabs">
+				<li class="selected" role="tab" tabindex="1"><a href="#projects">Projects</a></li>
+				<li role="tab" tabindex="-1"><a href="#tasks">Tasks</a></li>
+				<li role="tab" tabindex="-1"><a href="#stats">Stats</a></li>
+			</ul>
+
+			<section class="tabs clearfix" rel="tab-1">
+				<div id="projects" class="tab" role="tabpanel">
+					<h2>Projects</h2>
+					<p>Banksy skateboard before they sold out Pinterest PBR&amp;B gastropub. YOLO VHS art party photo booth, Shoreditch polaroid messenger bag butcher cray post-ironic hella pork belly. Quinoa messenger bag YOLO, beard twee hella locavore cornhole sartorial kitsch fap banh mi blog pop-up tofu. Semiotics drinking vinegar Neutra Wes Anderson, raw denim asymmetrical butcher ethnic you probably haven't heard of them photo booth before they sold out biodiesel. Vegan pickled aesthetic banh mi, letterpress Truffaut whatever asymmetrical butcher Thundercats kale chips. Pop-up High Life readymade, Vice master cleanse synth cray art party chambray DIY pug swag VHS yr. Chillwave art party McSweeney's, retro umami Cosby sweater chambray kogi Truffaut.</p>
+				</div>
+				<div id="tasks" class="tab" role="tabpanel">
+					<h2>Tasks</h2>
+					<p>Banksy skateboard before they sold out Pinterest PBR&amp;B gastropub. YOLO VHS art party photo booth, Shoreditch polaroid messenger bag butcher cray post-ironic hella pork belly. Quinoa messenger bag YOLO, beard twee hella locavore cornhole sartorial kitsch fap banh mi blog pop-up tofu. Semiotics drinking vinegar Neutra Wes Anderson, raw denim asymmetrical butcher ethnic you probably haven't heard of them photo booth before they sold out biodiesel. Vegan pickled aesthetic banh mi, letterpress Truffaut whatever asymmetrical butcher Thundercats kale chips. Pop-up High Life readymade, Vice master cleanse synth cray art party chambray DIY pug swag VHS yr. Chillwave art party McSweeney's, retro umami Cosby sweater chambray kogi Truffaut.</p>
+				</div>
+				<div id="stats" class="tab" role="tabpanel">
+					<h2>Stats</h2>
+					<p>Banksy skateboard before they sold out Pinterest PBR&amp;B gastropub. YOLO VHS art party photo booth, Shoreditch polaroid messenger bag butcher cray post-ironic hella pork belly. Quinoa messenger bag YOLO, beard twee hella locavore cornhole sartorial kitsch fap banh mi blog pop-up tofu. Semiotics drinking vinegar Neutra Wes Anderson, raw denim asymmetrical butcher ethnic you probably haven't heard of them photo booth before they sold out biodiesel. Vegan pickled aesthetic banh mi, letterpress Truffaut whatever asymmetrical butcher Thundercats kale chips. Pop-up High Life readymade, Vice master cleanse synth cray art party chambray DIY pug swag VHS yr. Chillwave art party McSweeney's, retro umami Cosby sweater chambray kogi Truffaut.</p>
+				</div>
+			</section>
+		</div>
+
+		<div class="row-list">
+			<h3>Row Lists</h3>
+			<ul class="rows">
+				<li>The first element</li>
+				<li>The second element</li>
+				<li>The third element</li>
+				<li>The fourth element</li>
+			</ul>
+		</div>
+
+		<div class="tile-list">
+			<h3>Tile Lists</h3>
+			<ul class="tiles">
+				<li>The first element</li>
+				<li>The second element</li>
+				<li>The third element</li>
+				<li>The fourth element</li>
+			</ul>
+		</div>
+
+
+
 </div>
 
 <footer class="clearfix">
@@ -172,5 +244,31 @@
 		</nav>
 	</div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+	$( "li[role='tab']" ).click(function( e ) {
+
+		e.preventDefault();
+		var el = $("#tabs");
+		var section = $(e.target).attr("href");
+		var link = $(e.target).closest("li");
+		var tab = $("#tabs").find("ul.tabs li").index(link);
+		var $container = $("#tabs").find("section.tabs");
+		// start counting from 1 ( not zero)
+		tab = parseInt(tab, 10) + 1;
+		// stop if already selected
+		if( $container.attr('rel') == "tab-" + tab ) return false;
+		$container.attr("rel", "tab-" + tab);
+		$(e.target).parent("li").addClass("selected").siblings().removeClass("selected");
+		// update hash url (silently)
+		// var route = this.options.path + section.replace("#", "");
+		// app.navigate(route, { trigger: false });
+		//return false;
+	});
+
+});
+
+</script>
 </body>
 </html>
