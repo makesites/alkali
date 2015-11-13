@@ -71,5 +71,51 @@
 	}
 }
 
+
+
+
+
+/* ul#projects {
+	&:extend(.rows);
+} */
+
+
+ul.tiles {
+	.tiles
+}
+
+.rows {
+	list-style-type: none;
+
+
+	> li, .row {
+		display: block;
+		width: 100%;
+		background-color: #fafafa;
+		margin-bottom: @margin;
+
+	}
+}
+
+
+.tiles {
+	list-style-type: none;
+
+	> li, .tile {
+		background-color: #fafafa;
+		width: ~"calc(33% - 20px)";
+		float: left;
+		margin: 10px;
+	}
+}
+
+/* ul#projects {
+	&:extend(.rows);
+} */
+
+/* ul.rows {
+	&:extend(.rows);
+} */
+
 /* @import "mixins/grid.less";
 .grid(grid-12; 12); */
