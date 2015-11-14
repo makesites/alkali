@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Alkali</title>
+<link type="text/css" href="/assets/css/main.min.css" media="screen" rel="stylesheet">
+<style>
+header.top {
+	/* box-shadow: 0 2px 5px rgba(0,0,0,0.26); */
+	background-color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+	margin-bottom: 0;
+}
+
+header.top h1 {
+	background-image: url(../assets/img/logo-a92c73.png);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	background-size: 25px;
+	padding-left: 30px;
+	color: #a92c73;
+}
+
+header.top a, header.top a:visited, header.top a:link {
+    color: #a92c73;
+}
+
+.box {
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+	box-shadow: 0 2px 11px rgba(0,0,0,0.2);
+	-webkit-transition: all .218s cubic-bezier(0.4,0.0,0.2,1);
+    transition: all .218s cubic-bezier(0.4,0.0,0.2,1);
+}
+
+.wrapper.flex {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	height: 70vh;
+}
+
+/* We tell all items to be 100% width */
+.wrapper .header, .wrapper .main, .wrapper .nav, .wrapper .aside, .wrapper .footer {
+  flex: 1 100%;
+}
+
+@media all and (min-width: 800px) {
+	.wrapper .aside {
+		min-width: 200px;
+		max-width: 200px;
+		width: 200px;
+		background-color: #fafafa;
+		order: 1;
+	}
+	.wrapper .main {
+		flex: 2 0px;
+		order: 2;
+		padding: 1em;
+	}
+	.wrapper .aside { order: 1; padding: 1em; }
+}
+
+footer {
+	margin-top: 0;
+}
+
+</style>
+</head>
+
+<body class="index">
+<header class="top">
+	<div class="container clearfix">
+		<h1 class="fl">Alkali</h1>
+
+
+	</div>
+</header>
+
+<div class="wrapper flex">
+
+  <article class="main">
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+  </article>
+  <aside class="aside">Aside 1</aside>
+
+
+</div>
+
+<footer class="clearfix">
+	<div class="container">
+		<p class="fl">This is the footer</p>
+
+		<nav class="fr hori">
+			<ul>
+				<li><a href="#buttons">Buttons</a></li>
+				<li><a href="#grid">Grid</a></li>
+				<li><a href="#forms">Forms</a></li>
+				<li><a href="#float-label">Float Label</a></li>
+			</ul>
+		</nav>
+	</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$( document ).ready(function() {
+	$( "li[role='tab']" ).click(function( e ) {
+
+		e.preventDefault();
+		var el = $("#tabs");
+		var section = $(e.target).attr("href");
+		var link = $(e.target).closest("li");
+		var tab = $("#tabs").find("ul.tabs li").index(link);
+		var $container = $("#tabs").find("section.tabs");
+		// start counting from 1 ( not zero)
+		tab = parseInt(tab, 10) + 1;
+		// stop if already selected
+		if( $container.attr('rel') == "tab-" + tab ) return false;
+		$container.attr("rel", "tab-" + tab);
+		$(e.target).parent("li").addClass("selected").siblings().removeClass("selected");
+		// update hash url (silently)
+		// var route = this.options.path + section.replace("#", "");
+		// app.navigate(route, { trigger: false });
+		//return false;
+	});
+
+});
+
+</script>
+</body>
+</html>
