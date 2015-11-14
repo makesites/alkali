@@ -2,7 +2,6 @@
 
 section.tabs {
 	margin: 0;
-
 	z-index: -1;
 	min-height: ~"calc(100% - 60px)";
 
@@ -49,6 +48,7 @@ section.tabs[rel="tab-3"] {
 /* tabs styling */
 ul[role="tabs"] {
 	margin-left: 0px;
+    margin-bottom: 0;
 	position:relative;
 	z-index: 2;
 	background-color: #eee;
@@ -82,7 +82,7 @@ ul[role="tabs"] {
 		}
 
 		&.selected {
-			background-color: #fafafa;
+			background-color: #fff;
 			background-image: none;
 			border: 0px solid @color-border;
 			border-bottom: none;
