@@ -1,11 +1,11 @@
-* Alkali
+# Alkali
 
 A base subset of common less structures
 
-** Buttons
+## Buttons
 
-** Grid
+## Grid
 
-** Forms
+## Forms
 
-** Tabs
+## Tabs
