@@ -1,5 +1,7 @@
 # Alkali
 
+![logo](http://cdn.makesites.org/media/project/alkali/alkali-logo-20160218-2k.png)
+
 A base subset of common less structures
 
 ## Buttons
