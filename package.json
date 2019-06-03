@@ -1,7 +1,7 @@
 {
   "name": "template",
   "version": "0.0.0",
-  "description": "casunday ad template",
+  "description": "alkali html framework",
   "main": "Gruntfile.js",
   "scripts": {
     "test": "test"
